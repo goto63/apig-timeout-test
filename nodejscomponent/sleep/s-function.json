@@ -17,11 +17,11 @@
       "authorizationType": "none",
       "apiKeyRequired": false,
       "requestParameters": {
-        "integration.request.querystring.time": "method.request.querystring.time"
+        "integration.request.querystring.delay": "method.request.querystring.delay"
       },
       "requestTemplates": {
         "application/json": {
-          "time": "$input.params('time')"
+          "delay": "$input.params('delay')"
         }
       },
       "responses": {
