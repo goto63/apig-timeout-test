@@ -1,0 +1,6 @@
+{
+  "project": "apig-timeout-test",
+  "projectBucket": "serverless.ap-northeast-1.apig-timeout-test",
+  "domain": "apig-timeout-test",
+  "notificationEmail": "tgoto63@gmail.com"
+}
