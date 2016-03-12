@@ -1,0 +1,43 @@
+{
+  "name": "sleep",
+  "customName": false,
+  "customRole": false,
+  "handler": "sleep/handler.handler",
+  "timeout": 60,
+  "memorySize": 128,
+  "custom": {
+    "excludePatterns": [],
+    "envVars": []
+  },
+  "endpoints": [
+    {
+      "path": "sleep",
+      "method": "GET",
+      "type": "AWS",
+      "authorizationType": "none",
+      "apiKeyRequired": false,
+      "requestParameters": {
+        "integration.request.querystring.time": "method.request.querystring.time"
+      },
+      "requestTemplates": {
+        "application/json": {
+          "time": "$input.params('time')"
+        }
+      },
+      "responses": {
+        "400": {
+          "statusCode": "400"
+        },
+        "default": {
+          "statusCode": "200",
+          "responseParameters": {},
+          "responseModels": {},
+          "responseTemplates": {
+            "application/json": ""
+          }
+        }
+      }
+    }
+  ],
+  "events": []
+}
